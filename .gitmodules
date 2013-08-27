@@ -1,0 +1,3 @@
+[submodule "cookbooks/cookbook-openstack-identity"]
+	path = cookbooks/cookbook-openstack-identity
+	url = https://github.com/stackforge/cookbook-openstack-identity.git
