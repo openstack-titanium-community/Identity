@@ -1,0 +1,28 @@
+{
+  "id": "bc-template-osidentity",
+  "description": "OpenStack Identity service (Keystone)",
+  "attributes": {
+    "osidentity": {
+      "public_endpoint": "yyy.yyy.yyy.yyy"
+    }
+  },
+  "deployment": {
+    "osidentity": {
+      "crowbar-revision": 0,
+      "element_states": {
+        "osidentity": [ "readying", "ready", "applying" ]
+      },
+      "elements": {},
+      "element_order": [
+        [ "osidentity" ]
+      ],
+      "config": {
+        "environment": "osidentity-base-config",
+        "mode": "full",
+        "transitions": false,
+        "transition_list": []
+      }
+    }
+  }
+}
+

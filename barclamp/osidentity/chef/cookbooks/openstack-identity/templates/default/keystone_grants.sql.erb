@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS <%= node["openstack"]["db"]["identity"]["db_name"] %>;
+GRANT ALL ON *.* TO '<%= node["identity"]["db"]["user"] %>'@'%' IDENTIFIED BY '<%= node["identity"]["db"]["password"] %>' WITH GRANT OPTION;
+FLUSH PRIVILEGES;

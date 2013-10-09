@@ -1,0 +1,49 @@
+# Copyright 2011, Dell
+# Copyright 2012, Dell 
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+barclamp:
+  name: osidentity 
+  display: osidentity
+  version: 0
+  requires:
+    - percona
+  member:
+    - haopenstack
+  os_support:
+    - ubuntu-12.04
+
+crowbar:
+  layout: 1
+  order: 75
+  run_order: 75
+  chef_order: 75
+
+locale_additions:
+  en:
+    barclamp:
+      osidentity:
+        edit_attributes:
+          attributes: Attributes
+          public_endpoint: Public Endpoint IP
+        edit_deployment:
+          deployment: Deployment
+
+debs:
+  pkgs:
+    - keystone
+    - python-keystone
+    - apache2
+    - libapache2-mod-wsgi
